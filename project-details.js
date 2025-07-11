@@ -42,7 +42,7 @@ const projects = {
       "Organizing controllers and FXML files",
       "Error handling for user inputs"
     ],
-    mediaSrc: "javaFx.JPG"
+    mediaSrc: "JavaFx.JPG"
   },
 
   "tales-of-tanzu": {
