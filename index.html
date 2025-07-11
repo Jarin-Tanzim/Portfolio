@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Jarin Tanzim - Front-End Developer & Entrepreneur" />
+  <title>Jarin Tanzim | Front-End Developer & Entrepreneur</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="#home" class="logo">Jarin Tanzim</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section-dark">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1>I'm <span class="highlight">Jarin Tanzim</span></h1>
+        <h2><span id="typewriter"></span><span class="cursor">|</span></h2>
+        <p>I craft digital experiences that blend code with creativity — from front-end design to content-driven branding.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-frame">
+          <img src="Jarin.jpeg" alt="Jarin Tanzim" />
+        </div>
+      </div>
+    </div>
+    
+  </section>
+</div>
+
+ <!-- Skills Section -->
+<section id="skills" class="skills-section-dark">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-subtitle">Technologies I've mastered throughout my development journey</p>
+    
+    <!-- Filter Buttons -->
+    <div class="skill-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="primary">Primary</button>
+      <button class="filter-btn" data-filter="secondary">Secondary</button>
+      <button class="filter-btn" data-filter="supporting">Supporting</button>
+    </div>
+    
+    <div class="skills-grid">
+  <!-- Primary Skills -->
+  <div class="skill-card" data-category="primary">
+    <div class="skill-icon">
+      <img src="js.png" alt="JavaScript" class="skill-icon-img" />
+    </div>
+    <span>JavaScript</span>
+  </div>
+  <div class="skill-card" data-category="primary">
+    <div class="skill-icon">
+      <img src="react.png" alt="React" class="skill-icon-img" />
+    </div>
+    <span>React</span>
+  </div>
+  <div class="skill-card" data-category="primary">
+    <div class="skill-icon">
+      <img src="json-file.png" alt="JSON" class="skill-icon-img" />
+    </div>
+    <span>JSON</span>
+  </div>
+  <div class="skill-card" data-category="primary">
+    <div class="skill-icon">
+      <img src="mysql.png" alt="MySQL" class="skill-icon-img" />
+    </div>
+    <span>MySQL</span>
+  </div>
+  <div class="skill-card" data-category="primary">
+  <div class="skill-icon">
+    <img src="c-sharp.png" alt="C++" class="skill-icon-img" />
+  </div>
+  <span>C++</span>
+</div>
+  
+  <!-- Secondary Skills -->
+  <div class="skill-card" data-category="secondary">
+    <div class="skill-icon">
+      <img src="html logo.png" alt="HTML" class="skill-icon-img" />
+    </div>
+    <span>HTML</span>
+  </div>
+  <div class="skill-card" data-category="secondary">
+    <div class="skill-icon">
+      <img src="css logo.png" alt="CSS" class="skill-icon-img" />
+    </div>
+    <span>CSS</span>
+  </div>
+  
+  <!-- Supporting Skills -->
+  <div class="skill-card" data-category="supporting">
+    <div class="skill-icon">
+      <img src="Canva-Logo-Transparent.png" alt="Canva" class="skill-icon-img" />
+    </div>
+    <span>Canva</span>
+  </div>
+  <div class="skill-card" data-category="supporting">
+    <div class="skill-icon">
+      <img src="meta.png" alt="Meta Suite" class="skill-icon-img" />
+    </div>
+    <span>Meta Suite</span>
+  </div>
+  <div class="skill-card" data-category="supporting">
+    <div class="skill-icon">
+      <img src="github.png" alt="GitHub" class="skill-icon-img" />
+    </div>
+    <span>GitHub</span>
+  </div>
+  <div class="skill-card" data-category="supporting">
+  <div class="skill-icon">
+    <img src="social-media.png" alt="Digital Marketing" class="skill-icon-img" />
+  </div>
+  <span>Digital Marketing
+    <small class="skill-subtitle"></small>
+  </span>
+</div>
+<div class="skill-card" data-category="supporting">
+  <div class="skill-icon">
+    <img src="video-editor.png" alt="Video Editing" class="skill-icon-img" />
+  </div>
+  <span>Video Editing
+    <small class="skill-subtitle"></small>
+  </span>
+</div>
+</div>
+
+<!-- Technical Proficiency Bars -->
+<div class="proficiency-section">
+  <h3 class="section-subtitle">Technical Proficiency</h3>
+  
+  <div class="proficiency-bars">
+    <!-- JavaScript -->
+    <div class="skill-bar">
+      <span class="skill-name">JavaScript</span>
+      <div class="bar-container">
+        <div class="skill-level js-bar" style="width: 90%;"></div>
+        <span class="percent-text">75%</span>
+      </div>
+    </div>
+    
+    <!-- React -->
+    <div class="skill-bar">
+      <span class="skill-name">React</span>
+      <div class="bar-container">
+        <div class="skill-level react-bar" style="width: 86%;"></div>
+        <span class="percent-text">70%</span>
+      </div>
+    </div>
+    
+    <!-- MySQL -->
+    <div class="skill-bar">
+      <span class="skill-name">MySQL</span>
+      <div class="bar-container">
+        <div class="skill-level mysql-bar" style="width: 80%;"></div>
+        <span class="percent-text">75%</span>
+      </div>
+    </div>
+    
+    <!-- HTML/CSS -->
+    <div class="skill-bar">
+      <span class="skill-name">HTML/CSS</span>
+      <div class="bar-container">
+        <div class="skill-level html-bar" style="width: 95%;"></div>
+        <span class="percent-text">95%</span>
+      </div>
+    </div>
+    
+    <!-- C++ -->
+    <div class="skill-bar">
+      <span class="skill-name">C++</span>
+      <div class="bar-container">
+        <div class="skill-level cpp-bar" style="width: 85%;"></div>
+        <span class="percent-text">70%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Always Learning Section -->
+<div class="learning-section">
+  <p class="learning-text">I'm a quick learner, always staying abreast of the latest industry trends and technologies to stay ahead of the curve. Currently exploring:</p>
+  
+  <div class="learning-badges">
+    <span class="learning-badge">GraphQL</span>
+    <span class="learning-badge">AWS</span>
+    <span class="learning-badge">Docker</span>
+    <span class="learning-badge">Three.js</span>
+    <span class="learning-badge">Testing</span>
+  </div>
+</div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section-dark">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-subtitle">Check out some of my recent work</p>
+    <div class="projects-grid">
+      
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="Tanzucreation.JPG" alt="Tanzu's Creation" class="project-img" />
+        </div>
+        <div class="project-body">
+          <h3>Tanzu's Creation</h3>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>MySQL</span>
+            <span>JSON</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://your-live-demo-link" class="btn btn-primary" target="_blank">Live Demo</a>
+            <a href="project-details.html?project=tanzu-creation" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="JavaFx.JPG" alt="Tanzu Desktop App" class="project-img" />
+        </div>
+        <div class="project-body">
+          <h3>Tanzu Desktop App</h3>
+          <div class="project-tags">
+            <span>Java</span>
+            <span>JavaFX</span>
+            <span>MySQL</span>
+            <span>FXML</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://your-github-link" class="btn btn-primary" target="_blank">Live Demo</a>
+            <a href="project-details.html?project=tanzu-desktop-app" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="contentcreator.jpg" alt="Tales of Tanzu" class="project-img" />
+        </div>
+        <div class="project-body">
+          <h3>Tales of Tanzu</h3>
+          <div class="project-tags">
+            <span>Meta Suite</span>
+            <span>Canva</span>
+            <span>Video Editing</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://www.facebook.com/profile.php?id=61559442729099" class="btn btn-primary" target="_blank">Live Demo</a>
+            <a href="project-details.html?project=tales-of-tanzu" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  <!-- Education Section -->
+
+    <section id="education" class="education-section">
+  <div class="container">
+    <h2 class="section-title">Education & Certifications</h2>
+    <p class="section-subtitle">My academic journey and qualifications</p>
+    
+    <div class="education-timeline">
+      <!-- BSc in Computer Science -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>BSc in Computer Science and Engineering</h3>
+          <div class="institution">
+            <div class="institution-icon">🎓</div>
+            Shanto-Mariam University of Creative Technology (SMUCT)
+          </div>
+          <div class="duration">2022 - Ongoing</div>
+          <div class="description">
+            Focused on software development, algorithms, and systems design
+          </div>
+        </div>
+      </div>
+
+      <!-- HSC in Science -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>HSC in Science</h3>
+          <div class="institution">
+            <div class="institution-icon">🏫</div>
+            Sompara College
+          </div>
+          <div class="duration">2018 - 2020</div>
+          <div class="description">
+            Concentrated on Physics, Chemistry, Mathematics, and Biology
+          </div>
+        </div>
+      </div>
+
+      <!-- SSC in Science -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>SSC in Science</h3>
+          <div class="institution">
+            <div class="institution-icon">🏫</div>
+            hahapur ML High School
+          </div>
+          <div class="duration">2016 - 2018</div>
+        </div>
+      </div>
+
+      <!-- Diploma in Early Childhood Development -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Diploma in Early Childhood Development</h3>
+          <div class="institution">
+            <div class="institution-icon">🍁</div>
+            Skilled Development Council Canada
+          </div>
+          <div class="duration"> Certified</div>
+           <div class="description">
+            Specialized training in early childhood development and education
+          </div>
+          <a href="ECD.jpg" target="_blank" class="btn btn-outline">
+            📜 View Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    
+    <div class="contact-columns">
+      <!-- Left Column - Contact Form -->
+      <div class="contact-form-column">
+        <h3 class="form-title">Send a Message</h3>
+        <form class="message-form" action="mailto:taanzu.official@gmail.com" method="post" enctype="text/plain">
+          <div class="form-field">
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-field">
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label>Your Message</label>
+            <textarea name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="email-button">
+            <i class="fas fa-paper-plane"></i> Send Email
+          </button>
+        </form>
+      </div>
+      
+      <!-- Right Column - Contact Info -->
+      <div class="contact-info-column">
+        <div class="availability-notice">
+          <p>I'm available for freelance work, interesting projects, and new opportunities.</p>
+          
+          <!-- Email Display -->
+          <div class="direct-email">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:taanzu.official@gmail.com">taanzu.official@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-reasons">
+          <h3 class="reasons-title">Why Contact Me?</h3>
+          <ul class="reasons-list">
+            <li><strong>Frontend Developer:</strong> Proficient in HTML, CSS, and JavaScript for building interactive websites</li>
+            <li><strong>Digital Marketing Skills:</strong>Experienced in social media strategies, branding, and content promotion</li>
+            <li><strong>Visual Content Creation:</strong> Skilled in video editing and graphic designing</li>
+            <li><strong>Creative Approach:</strong>Blending technical and design abilities to deliver engaging digital experiences</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="connect-with-me-section">
+        <h2>Connect With Me</h2>
+        <div class="buttons-container">
+            <a href="https://www.linkedin.com/in/jarin-tanzim-250415263/" target="_blank" class="btn connect-linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Jarin-Tanzim" target="_blank" class="btn connect-github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="Jarin_Resume.pdf" target="_blank" class="btn connect-resume">
+                <i class="fas fa-download"></i> Resume
+            </a>
+        </div>
+    </div>
+  <!-- Footer -->
+  <footer class="footer-dark">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Jarin Tanzim. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

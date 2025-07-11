@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Details - Jarin Tanzim's Portfolio">
+    <title id="project-page-title">Project Details | Jarin Tanzim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Reusing your main style.css -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Basic styling for the project details page */
+        body {
+            background-color: #1a1a2e; /* Dark background */
+            color: #ffffff;
+            font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Ensure navbar is fixed and doesn't overlap content */
+        #navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: #1a1a2e; /* Match body background */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-detail-container {
+            max-width: 1100px; /* Increased max-width to match image */
+            margin: 100px auto 40px auto; /* Adjust top margin for fixed navbar */
+            padding: 30px;
+            background-color: #2a2a4a; /* Slightly lighter dark background for content */
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            flex-grow: 1; /* Allows container to take up available space */
+            position: relative; /* For potential absolute positioning of elements inside */
+        }
+
+        .project-media {
+            width: 100%;
+            height: 500px; /* Fixed height for the media container */
+            background-color: #000; /* Placeholder background */
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* For video/image positioning */
+        }
+
+        .project-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area */
+            border-radius: 8px;
+        }
+
+        .project-detail-container h1 {
+            font-size: 3em; /* Larger title */
+            color: #00c6ff; /* Highlight color */
+            margin-bottom: 10px;
+            text-align: left; /* Align to left as in image */
+        }
+
+        .project-detail-container p.tagline {
+            font-size: 1.4em; /* Larger tagline */
+            color: #ccc;
+            margin-bottom: 30px;
+            text-align: left; /* Align to left as in image */
+        }
+
+        .live-demo-btn-wrapper {
+            text-align: left; /* Align to left as in image */
+            margin-bottom: 40px;
+        }
+
+        .live-demo-btn {
+            display: inline-flex; /* Use flex for icon and text alignment */
+            align-items: center;
+            background-image: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #ffffff;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.5);
+        }
+
+        .live-demo-btn i {
+            margin-right: 10px;
+        }
+
+        .live-demo-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 198, 255, 0.7);
+        }
+
+        .project-section-title {
+            font-size: 2em; /* Larger section titles */
+            color: #00c6ff;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(0, 198, 255, 0.3);
+            padding-bottom: 10px;
+            text-align: left; /* Align to left */
+        }
+
+        .technologies-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between tags */
+        }
+
+        .technologies-list li {
+            background-color: #3a3a5a; /* Darker background for tags */
+            padding: 8px 15px;
+            border-radius: 20px; /* More rounded for tag look */
+            font-size: 0.95em;
+            color: #eee;
+            display: flex;
+            align-items: center;
+            border: 1px solid #00c6ff; /* Border for tags */
+        }
+
+        .features-list, .challenges-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .features-list li, .challenges-list li {
+            font-size: 1.1em;
+            color: #ddd;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px; /* Space for the icon */
+        }
+
+        /* Checkmark icon for features list */
+        .features-list li::before {
+            font-family: "Font Awesome 6 Free"; /* Use Font Awesome font */
+            content: "\f00c"; /* Unicode for checkmark icon */
+            font-weight: 900; /* Solid icon */
+            color: #28a745; /* Green checkmark */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .project-description p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #ddd;
+        }
+
+        .back-button-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #555;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #777;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .project-detail-container {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-detail-container {
+                margin-top: 80px; /* Adjust for smaller fixed navbar */
+                padding: 20px;
+            }
+
+            .project-media {
+                height: 300px; /* Adjust height for mobile */
+            }
+
+            .project-detail-container h1 {
+                font-size: 2.2em;
+            }
+
+            .project-detail-container p.tagline {
+                font-size: 1.2em;
+            }
+
+            .live-demo-btn {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+
+            .project-section-title {
+                font-size: 1.8em;
+            }
+
+            .technologies-list {
+                flex-direction: row; /* Keep as row, but allow wrapping */
+                justify-content: center;
+            }
+
+            .features-list li, .challenges-list li {
+                font-size: 1em;
+                padding-left: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-detail-container {
+                padding: 15px;
+            }
+            .project-media {
+                height: 200px;
+            }
+            .project-detail-container h1 {
+                font-size: 1.8em;
+            }
+            .project-detail-container p.tagline {
+                font-size: 1em;
+            }
+            .live-demo-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .project-section-title {
+                font-size: 1.6em;
+            }
+            .technologies-list li {
+                padding: 6px 12px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Jarin Tanzim</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="project-detail-container">
+        <!-- Project Media (Image/Video Placeholder) -->
+        <div class="project-media">
+            <img id="project-main-media" src="https://placehold.co/1000x500/000000/FFFFFF?text=Project+Media" alt="Project Media Placeholder">
+            <!-- You can replace the <img> tag with a <video> tag or an iframe for YouTube/Vimeo embeds later -->
+            <!-- Example for video:
+            <video id="project-main-media" controls src="your-video-url.mp4" style="width:100%; height:100%; object-fit:cover;"></video>
+            -->
+        </div>
+
+        <h1 id="project-title">Project Title Loading...</h1>
+        <p class="tagline" id="project-tagline">Project Tagline Loading...</p>
+
+        <div class="live-demo-btn-wrapper">
+            <a id="live-demo-link" href="#" target="_blank" class="live-demo-btn" style="display: none;">
+                <i class="fas fa-external-link-alt"></i> View Live Demo
+            </a>
+        </div>
+
+        <h3 class="project-section-title">Technologies Used</h3>
+        <ul id="technologies-list" class="technologies-list">
+            <!-- Technologies will be injected here by JavaScript -->
+        </ul>
+
+        <h3 class="project-section-title">About This Project</h3>
+        <div id="project-about" class="project-description">
+            <!-- About text will be injected here by JavaScript -->
+            <p>Loading project description...</p>
+        </div>
+
+        <h3 class="project-section-title">Key Features</h3>
+        <ul id="key-features-list" class="features-list">
+            <!-- Key features will be injected here by JavaScript -->
+        </ul>
+
+        <h3 class="project-section-title">Challenges & Solutions</h3>
+        <div id="challenges-solutions-list" class="challenges-list project-description">
+            <!-- Challenges & Solutions will be injected here by JavaScript -->
+            <p>Loading challenges and solutions...</p>
+        </div>
+
+        <div class="back-button-container">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-dark">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Jarin Tanzim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Set current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Hamburger menu functionality (copied from your index.html)
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+    </script>
+    <script src="project-details.js"></script> <!-- Link to the new JavaScript file -->
+</body>
+</html>
